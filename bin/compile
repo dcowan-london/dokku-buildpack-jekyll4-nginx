@@ -49,6 +49,9 @@ fi
 export GEM_HOME=$BUILD_DIR/.gems
 export PATH=$BUILD_DIR/.gems/bin:$PATH
 
+echo "Get latest RubyGems"
+gem update --system
+
 if [ ! -f $BUILD_DIR/.gems/bin/jekyll ]; then
     echo "Jekyll not found!"
     echo "-----> Installing Jekyll"
