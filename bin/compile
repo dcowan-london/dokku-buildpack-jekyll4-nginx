@@ -50,7 +50,7 @@ export GEM_HOME=$BUILD_DIR/.gems
 export PATH=$BUILD_DIR/.gems/bin:$PATH
 
 echo "Get latest RubyGems"
-gem update --system
+gem update --system | indent
 
 if [ ! -f $BUILD_DIR/.gems/bin/jekyll ]; then
     echo "Jekyll not found!"
